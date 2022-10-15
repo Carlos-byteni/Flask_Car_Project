@@ -38,7 +38,6 @@ def protected():
     current_user = get_jwt_identity()
     return jsonify(logged_in_as=current_user), 200
 
-
 api.add_resource(Car, '/car/<string:model>')
 api.add_resource(CarList, '/cars')
 api.add_resource(UserRegister, '/register')
